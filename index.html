@@ -1,0 +1,450 @@
+<!-- rebuild trigger -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rashid Sons</title>
+
+<style>
+:root {
+    --green: #01411C;
+    --black: #000000;
+    --white: #ffffff;
+}
+
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--white);
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: var(--white);
+    color: var(--black);
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 115px;
+    width: auto;
+}
+
+nav a {
+    margin: 0 15px;
+    color: var(--black);
+    text-decoration: none;
+    position: relative;
+}
+
+/* Nav hover underline animation */
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: var(--green);
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* BUTTON */
+.btn {
+    background: #124874;
+    padding: 10px 18px;
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #124874;
+    transform: scale(1.05);
+}
+
+/* HERO */
+.hero {
+    height: 85vh;
+    background: url('https://github.com/lewishunt165-dev/product-images/raw/main/Protest%20Plus%20%20final.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ABOUT */
+.about {
+    display: flex;
+    padding: 70px 50px;
+    align-items: center;
+    gap: 40px;
+}
+
+.about {
+    display: flex;
+    padding: 70px 50px;
+    gap: 40px;
+    align-items: flex-start; /* important */
+}
+
+.about img {
+    width: 50%;
+    border-radius: 10px;
+
+    position: sticky;
+    top: 100px; /* distance from top while scrolling */
+    height: fit-content;
+}
+
+.about p {
+    width: 50%;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.about img {
+    width: 50%;
+    border-radius: 10px;
+    transition: 2s;
+}
+
+.about img:hover {
+    transform: scale(1.05);
+}
+
+.about p {
+    width: 50%;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* GRID */
+.grid {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* each row */
+.row {
+    display: flex;
+    gap: 25px;
+}
+
+/* center row (single image) */
+.row.center {
+    justify-content: center;
+}
+
+/* image styling */
+.row img {
+    width: 100%;
+    height: 220px;        /* control size here */
+    object-fit: cover;    /* keeps image cropped nicely */
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+/* CENTER ROW IMAGE */
+.row.center img {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+object-position: center top;
+    margin: 0 auto;
+    border: 2px solid #01411C;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transform: scale(1.02);
+}
+
+/* 2 images per row */
+.row:not(.center) img {
+    width: 50%;
+}
+
+/* hover effect */
+.row img:hover {
+    transform: scale(1.05);
+}
+/* FOOTER */
+footer {
+    background: #fff !important;
+    color: #000 !important;
+    padding: 60px 10%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    align-items: start;
+}
+
+footer a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+    margin: 6px 0;
+    opacity: 0.75;
+    position: relative;
+    transition: 0.3s;
+}
+
+footer h4 {
+    margin-bottom: 12px;
+}
+
+footer p {
+    margin: 6px 0;
+}
+
+.footer-logo {
+    height: 110px;
+    width: auto;
+    display: block;
+}
+
+footer .tagline {
+    color: #000;
+    font-size: 14px;
+    margin-top: 10px;
+    opacity: 0.8;
+    line-height: 1.5;
+    max-width: 250px;
+}
+
+.footer a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 1px;
+    width: 0%;
+    background: #01411C;
+    transition: 0.3s;
+}
+
+.footer a:hover::after {
+    width: 100%;
+}
+
+footer a:hover {
+    color: #000;
+opacity: 1;
+}
+
+.footer-col {
+    position: relative;
+    padding: 0 25px;
+}
+
+.footer-col:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background: rgba(255,255,255,0.15);
+}
+
+.sub-footer {
+      background: #fff;
+    color: #000;
+    width: 100%;
+    text-align: center;
+    padding: 18px 0;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.sub-footer p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* SCROLL ANIMATION */
+.fade {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* KEYFRAMES */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+    }
+
+    .about img,
+    .about p {
+        width: 100%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr; /* stack on mobile */
+        padding: 40px 20px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">
+    <a href="#">
+        <img src="https://github.com/lewishunt165-dev/product-images/raw/main/Logo.jpeg" alt="Logo">
+    </a>
+</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Products</a>
+        <a href="#">Contact</a>
+    </nav>
+    <a href="#" class="btn">Get in Touch</a>
+</header>
+
+<!-- HERO -->
+<section class="hero"></section>
+
+
+<!-- ABOUT -->
+<section class="about fade">
+    <img src="https://github.com/lewishunt165-dev/product-images/raw/main/3%20(1).jpeg">
+    <p>Founded in 1932 by Late <b>Haji Abdul Rashid</b> in Delhi, <b>Rashid Shoe Company</b> carries a legacy built on craftsmanship, trust, and excellence. Following the partition, the company relocated to Karachi, where it continued to grow into one of Pakistan’s most recognized names in the footwear industry.
+
+<br>Today, <b>Rashid Shoe Company</b> stands as a leading manufacturer, distributor, retailer, wholesaler, importer, and exporter of premium footwear and accessories. With a strong presence across Sindh and Balochistan, we have developed an extensive dealer network of over 900 partners, along with a growing chain of 25 retail outlets across Karachi.
+
+<br>Driven by a commitment to quality and innovation, we supply approximately 3.5 million pairs of footwear annually, serving customers with products that combine durability, comfort, and style. Our contribution to the industry is further reflected in our standing as one of the largest sales tax contributors in the wholesale sector from Karachi.
+
+<br>At <b>Rashid Shoe Company</b>, our vision is to continue shaping the future of footwear in <b>Pakistan</b> while staying true to the values that have defined us for generations.
+    </p>
+</section>
+
+<!-- GRID -->
+<section class="grid">
+
+    <!-- top row (2 images) -->
+    <div class="row">
+        <img src="https://github.com/lewishunt165-dev/product-images/raw/main/homepage2.jpeg">
+        <img src="https://raw.githubusercontent.com/lewishunt165-dev/product-images/main/2.jpeg">
+    </div>
+
+
+
+    <!-- bottom row (2 images) -->
+    <div class="row">
+        <img src="https://github.com/lewishunt165-dev/product-images/raw/main/homepage1.jpeg">
+        <img src="https://raw.githubusercontent.com/lewishunt165-dev/product-images/main/9.jpeg">
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-col">
+        <img src="https://github.com/lewishunt165-dev/product-images/raw/main/Logo.jpeg" class="footer-logo">
+
+        <p class="tagline">
+            Premium quality products crafted with trust and excellence.
+        </p>
+    </div>
+
+    <div class="footer-col">
+        <h4>Menu</h4>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Products</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div class="footer-col">
+        <h4>Contact</h4>
+
+        <p>
+            Address: 
+           <a href="https://maps.app.goo.gl/bnWwBLx7bFoPmAk88" target="_blank">Ground Floor, Ameena Godown, Harmasji Street, Gari Khata, M.A. Jinnah Road, Karachi.</a>
+        </p>
+
+        <p>
+            Email: 
+            <a href="mailto:info@rashidshoecompany.com">
+                info@rashidshoecompany.com
+            </a>
+        </p>
+
+        <p>
+            Phone:<br>
+            <a href="tel:03452221011">Abdul Latif: 0345-2221011</a>
+            <a href="tel:03146585220">Kashif Hussain: 0314-6585220</a>
+            <a href="tel:03040083534">Rashid Anwar: 0304-0083534</a>
+        </p>
+    </div>
+
+</footer>
+
+<!-- SUB FOOTER -->
+<div class="sub-footer">
+    <p>© 2026 Rashid Shoe Company. All rights reserved.</p>
+</div>
+
+<!-- JS for scroll animation -->
+<script>
+const faders = document.querySelectorAll('.fade');
+
+window.addEventListener('scroll', () => {
+    faders.forEach(el => {
+        const rect = el.getBoundingClientRect().top;
+        if(rect < window.innerHeight - 100){
+            el.classList.add('show');
+        }
+    });
+});
+</script>
+
+</body>
+</html>
