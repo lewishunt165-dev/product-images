@@ -87,6 +87,29 @@ nav a:hover::after {
     background-repeat: no-repeat;
 }
 
+/* DARK OVERLAY */
+.hero-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5); /* adjust darkness here */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeUp 1s ease;
+}
+
+/* HEADING STYLE */
+.hero-overlay h1{
+    color: #fff;
+    font-size: 52px;
+    font-weight: bold;
+    text-align: center;
+}
+    
+
 .contact-section{
     max-width:1200px;
     margin:0 auto;
@@ -361,7 +384,11 @@ opacity: 1;
 </header>
 
 <!-- HERO -->
-<section class="hero"></section>
+<section class="hero">
+    <div class="hero-overlay">
+        <h1>Contact Us</h1>
+    </div>
+</section>
 
 
 <section class="contact-section">
