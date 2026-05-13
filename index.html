@@ -149,6 +149,12 @@ nav a:hover::after {
     gap: 25px;
 }
 
+/* links */
+.row a{
+    width:50%;
+    display:block;
+}
+
 /* center row (single image) */
 .row.center {
     justify-content: center;
@@ -157,10 +163,11 @@ nav a:hover::after {
 /* image styling */
 .row img {
     width: 100%;
-    height: 220px;        /* control size here */
-    object-fit: cover;    /* keeps image cropped nicely */
+    height: 220px;
+    object-fit: cover;
     border-radius: 12px;
     transition: 0.3s ease;
+    display:block;
 }
 
 /* CENTER ROW IMAGE */
@@ -168,17 +175,13 @@ nav a:hover::after {
     height: 220px;
     width: 100%;
     object-fit: cover;
-object-position: center top;
+    object-position: center top;
     margin: 0 auto;
     border: 2px solid #01411C;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     transform: scale(1.02);
 }
 
-/* 2 images per row */
-.row:not(.center) img {
-    width: 50%;
-}
 
 /* hover effect */
 .row img:hover {
@@ -369,16 +372,28 @@ opacity: 1;
 
     <!-- top row (2 images) -->
     <div class="row">
-        <img src="https://github.com/lewishunt165-dev/product-images/raw/main/homepage2.jpeg">
-        <img src="https://raw.githubusercontent.com/lewishunt165-dev/product-images/main/2.jpeg">
+
+        <a href="p1.html">
+            <img src="https://github.com/lewishunt165-dev/product-images/raw/main/homepage2.jpeg">
+        </a>
+
+        <a href="p2.html">
+            <img src="https://raw.githubusercontent.com/lewishunt165-dev/product-images/main/2.jpeg">
+        </a>
+
     </div>
-
-
 
     <!-- bottom row (2 images) -->
     <div class="row">
-        <img src="https://github.com/lewishunt165-dev/product-images/raw/main/homepage1.jpeg">
-        <img src="https://raw.githubusercontent.com/lewishunt165-dev/product-images/main/9.jpeg">
+
+        <a href="p3.html">
+            <img src="https://github.com/lewishunt165-dev/product-images/raw/main/homepage1.jpeg">
+        </a>
+
+        <a href="p4.html">
+            <img src="https://raw.githubusercontent.com/lewishunt165-dev/product-images/main/9.jpeg">
+        </a>
+
     </div>
 
 </section>
@@ -419,9 +434,9 @@ opacity: 1;
 
         <p>
             Phone:<br>
-            <a href="tel:03452221011">Abdul Latif: 0345-2221011</a>
-            <a href="tel:03146585220">Kashif Hussain: 0314-6585220</a>
-            <a href="tel:03040083534">Rashid Anwar: 0304-0083534</a>
+            <a href="tel:03452221011">Abdul Latif: 	0345-2221011</a>
+            <a href="tel:03146585220">Kashif Hussain: 	0314-6585220</a>
+            <a href="tel:03040083534">Rashid Anwar: 	0304-0083534</a>
         </p>
     </div>
 
