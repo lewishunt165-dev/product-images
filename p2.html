@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rashid Sons - Product Page</title>
+
+<style>
+:root {
+    --green: #01411C;
+    --black: #000000;
+    --white: #ffffff;
+    --blue: #124874;
+}
+
+/* GLOBAL RESET */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body { 
+    font-family: Arial, sans-serif; 
+    background: var(--white); 
+    color:#000; 
+    overflow-x: hidden; 
+}
+
+/* HEADER */
+header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px 2%; /* Reduced padding */
+}
+.logo img { height: 115px; width: auto; }
+nav a { margin: 0 15px; color: var(--black); text-decoration: none; }
+.btn { 
+    background: var(--blue); 
+    padding: 10px 18px; 
+    color: var(--white); 
+    text-decoration: none; 
+    border-radius: 5px; 
+}
+
+/* HERO */
+.hero { 
+    height: 85vh; 
+    background: url('https://github.com/lewishunt165-dev/product-images/raw/main/Protest%20Plus%20%20final.jpeg'); 
+    background-size: cover; 
+    background-position: center; 
+}
+
+/* PRODUCT SECTION - REMOVED LEFT MARGINS */
+.product-main-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    width: 100%; /* Full width */
+    margin: 60px 0; /* Zero horizontal margin */
+    padding: 0 0 0 2%; /* Only a tiny 2% gap from the screen edge */
+}
+
+.product-details {
+    flex: 1;
+    min-width: 450px;
+    text-align: left;
+}
+
+.product-details h1 { font-size: 58px; margin-bottom: 15px; text-align: left; }
+.yellow { color: var(--blue); }
+.badge { 
+    display:inline-block; 
+    background: var(--blue); 
+    color:#fff; 
+    padding: 8px 15px; 
+    border-radius: 30px; 
+    font-size: 14px; 
+    margin-bottom: 20px; 
+}
+
+/* TABLE - FLUSH LEFT */
+.specs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0; 
+}
+.specs-table td { 
+    border: 1px solid #ddd; 
+    padding: 12px; 
+    text-align: left; 
+}
+.specs-table tr:nth-child(even) { background: #f8f8f8; }
+
+/* ICONS - FLUSH LEFT */
+.icon-bar { 
+    display: flex; 
+    gap: 10px; 
+    flex-wrap: wrap; 
+    margin: 20px 0 0 0; 
+    justify-content: flex-start;
+}
+.icon-box img { width: 45px; height: 45px; object-fit: contain; }
+
+/* PRODUCT IMAGE */
+.product-image {
+    flex: 1.2;
+    display: flex;
+    justify-content: flex-end; /* Pushes image to far right */
+}
+.product-image img { 
+    width: 100%; 
+    max-width: 650px; 
+    height: auto; 
+}
+
+/* FEATURES GRID - FLUSH LEFT */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 20px;
+    width: 100%;
+    margin: 0;
+    padding: 80px 2%; /* Matches product section padding */
+    background: #fff;
+    clear: both;
+}
+.feature-item { 
+    display: flex; 
+    align-items: flex-start; 
+    gap: 15px; 
+    text-align: left; 
+}
+.feature-item img { width: 100px; height: 100px; object-fit: cover; flex-shrink: 0; }
+
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 60px 10%;
+    background: #fff;
+    border-top: 1px solid #eee;
+    clear: both;
+}
+
+footer a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+    margin: 6px 0;
+    opacity: 0.75;
+    position: relative;
+    transition: 0.3s;
+}
+
+footer h4 {
+    margin-bottom: 12px;
+}
+
+.footer-logo {
+    height: 110px;
+    width: auto;
+    display: block;
+}
+
+footer .tagline {
+    color: #000;
+    font-size: 14px;
+    margin-top: 10px;
+    opacity: 0.8;
+    line-height: 1.5;
+    max-width: 250px;
+}
+
+/* FOOTER HOVER */
+
+.footer a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 1px;
+    width: 0%;
+    background: #01411C;
+    transition: 0.3s;
+}
+
+.footer a:hover::after {
+    width: 100%;
+}
+
+.footer-col {
+    position: relative;
+    padding: 0 25px;
+}
+
+.footer-col:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background: rgba(0,0,0,0.1);
+}
+
+/* SUB FOOTER */
+
+.sub-footer {
+    background: #fff;
+    color: #000;
+    width: 100%;
+    text-align: center;
+    padding: 18px 0;
+    font-size: 13px;
+    opacity: 0.8;
+}
+@media (max-width: 950px) {
+    .product-main-row { flex-direction: column; padding: 0 5%; }
+    .features-grid { grid-template-columns: 1fr; padding: 40px 5%; }
+    footer { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo"><img src="https://github.com/lewishunt165-dev/product-images/raw/main/Logo.jpeg"></div>
+    <nav><a href="#">Home</a><a href="#">About</a><a href="#">Products</a><a href="#">Contact</a></nav>
+    <a href="#" class="btn">Get in Touch</a>
+</header>
+
+<section class="hero"></section>
+
+<section class="product-main-row">
+    <div class="product-details">
+        <span class="badge">Medium Duty</span>
+        <h1>SFT <span class="yellow">1036</span></h1>
+        <p class="tagline">All-time favorite low-cut safety shoe.</p>
+
+        <table class="specs-table">
+            <tr><td>Upper</td><td>Barton Action Leather</td></tr>
+            <tr><td>Lining</td><td>Mesh</td></tr>
+            <tr><td>Footbed</td><td>SJ Foam Footbed</td></tr>
+            <tr><td>Midsole</td><td>Steel</td></tr>
+            <tr><td>Outsole</td><td>PU / PU</td></tr>
+            <tr><td>Toecap</td><td>Steel</td></tr>
+            <tr><td>Safety Standard</td><td>S3 / SRC</td></tr>
+        </table>
+
+        <div class="icon-bar">
+            <div class="icon-box"><img src="https://github.com/lewishunt165-dev/product-images/raw/main/breath.png"></div>
+            <div class="icon-box"><img src="https://github.com/lewishunt165-dev/product-images/raw/main/toe%20cap.png"></div>
+            <div class="icon-box"><img src="https://github.com/lewishunt165-dev/product-images/raw/main/wru.png"></div>
+            <div class="icon-box"><img src="https://github.com/lewishunt165-dev/product-images/raw/main/electric.png"></div>
+            <div class="icon-box"><img src="https://github.com/lewishunt165-dev/product-images/raw/main/saftet.png"></div>
+            <div class="icon-box"><img src="https://github.com/lewishunt165-dev/product-images/raw/main/leather.png"></div>
+            <div class="icon-box"><img src="https://github.com/lewishunt165-dev/product-images/raw/main/oil%20resistant.png"></div>
+            <div class="icon-box"><img src="https://github.com/lewishunt165-dev/product-images/raw/main/anti%20slip.png"></div>
+            <div class="icon-box"><img src="https://github.com/lewishunt165-dev/product-images/raw/main/anti-slip.png"></div>
+        </div>
+    </div>
+
+    <div class="product-image">
+        <img src="https://github.com/lewishunt165-dev/product-images/raw/main/6%20(1).jpg">
+    </div>
+</section>
+
+<section class="features-grid">
+    <div class="feature-item">
+        <img src="https://github.com/lewishunt165-dev/product-images/raw/main/oil_fuel_resistant.png">
+        <div class="feature-content"><h3>Oil & fuel resistant</h3><p>The outsole is resistant against oil and fuel.</p></div>
+    </div>
+    <div class="feature-item">
+        <img src="https://github.com/lewishunt165-dev/product-images/raw/main/steel_toecap.png">
+        <div class="feature-content"><h3>Steel toecap</h3><p>Robust metal support to protect the feet.</p></div>
+    </div>
+    <div class="feature-item">
+        <img src="https://github.com/lewishunt165-dev/product-images/raw/main/breathable_leather_upper.png">
+        <div class="feature-content"><h3>Breathable leather upper</h3><p>Natural leather provides a high degree of comfort.</p></div>
+    </div>
+    <div class="feature-item">
+        <img src="https://github.com/lewishunt165-dev/product-images/raw/main/steel_midsole.png">
+        <div class="feature-content"><h3>Steel midsole</h3><p>Puncture resistant steel midsoles prevent sharp objects.</p></div>
+    </div>
+    <div class="feature-item">
+        <img src="https://github.com/lewishunt165-dev/product-images/raw/main/s3_safety.png">
+        <div class="feature-content"><h3>S3</h3><p>Suitable for high humidity and presence of oil.</p></div>
+    </div>
+    <div class="feature-item">
+        <img src="https://github.com/lewishunt165-dev/product-images/raw/main/src_slip_resistance.png">
+        <div class="feature-content"><h3>SRC slip resistance</h3><p>Tested on both steel and ceramic surfaces.</p></div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-col">
+        <img src="https://github.com/lewishunt165-dev/product-images/raw/main/Logo.jpeg" class="footer-logo">
+        <p class="tagline">Premium quality products crafted with trust and excellence.</p>
+    </div>
+
+    <div class="footer-col">
+        <h4>Menu</h4>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Products</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Address: <a href="#" target="_blank">Ground Floor, Ameena Godown, Karachi.</a></p>
+        <p>Email: <a href="mailto:info@rashidshoecompany.com">info@rashidshoecompany.com</a></p>
+        <p>Phone:<br>
+            <a href="tel:03452221011">Abdul Latif: 0345-2221011</a>
+            <a href="tel:03146585220">Kashif Hussain: 0314-6585220</a>
+        </p>
+    </div>
+</footer>
+
+<div class="sub-footer">
+    <p>© 2026 Rashid Shoe Company. All rights reserved.</p>
+</div>
+
+</body>
+</html>
